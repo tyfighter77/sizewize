@@ -1,0 +1,20 @@
+<div class="navBar">
+  <img class="navLogo" src="../images/SizeWizeLogov1.png" />
+  <div class="navButton" ng-click="logout()">LOGOUT</div>
+</div>
+
+<div class="profileListContainer">
+  <div class="profileListBox" ng-repeat="profile in profiles">
+    <div class="profileList" ng-click="goToProf(profile)">{{profile.name}}</div>
+  </div>
+<div class="profileListBox">
+  <div class="profileList" ng-click="openProfModal()">+</div>
+</div>
+</div>
+<div class="mannequinPrevContainer">
+  <div class="mannequinPrevBox">
+    <img class="mannequinPrev" src="../images/AM-body.png" />
+  </div>
+
+
+</div>

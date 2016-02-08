@@ -1,0 +1,38 @@
+<div class="navBar">
+  <img class="navLogo" src="../images/SizeWizeLogov1.png" />
+  <div class="navButton" ng-click="logout()">LOGOUT</div>
+  <div class="navButton" ng-click="goToProfs()">PROFILES</div>
+</div>
+
+<div class="profileListContainer">
+  <!-- <span ng-click = "">torso</span>
+  <span ng-click = "">head</span>
+  <span ng-click = "">arms</span>
+  <span ng-click = "">bottoms</span>
+  <span ng-click = "">feet</span> -->
+  <div class="profileListBox" ng-repeat="item in profile.region[region]">
+    <div class="profileList" ng-click="itemClick = !itemClick">{{item.item}}</div>
+    <div class="profileList" ng-if="itemClick" ng-click="openItemModal()">{{item.size}}</div>
+  </div>
+  <div class="profileListBox" ng-if="profile.region[region]">
+    <div class="profileList" ng-click="openItemModal()">+</div>
+  </div>
+</div>
+<div class="mannequinContainer">
+  <div class="mannequinBox">
+    <div class="nameLabel" ng-click="openProfModal()">{{profile.name}}</div>
+    <img class="mannequin" ng-src="{{mannequinImg}}" usemap="#bodyParts"/>
+
+  </div>
+
+
+</div>
+
+<map name="bodyParts">
+    <area shape="circle" coords="131,130,45" ng-click="region='head'" title="Head" ng-mouseover="highlightRegion('head')" ng-mouseleave="this.src='../images/AM-body.png';"/>
+    <area shape="poly" coords="50,217,83,245,86,350,81,401,85,446,68,467,57,432" ng-click="region='arms'" title="Right Arm" />
+    <area shape="poly" coords="212,217,182,245,184,350,193,401,190,446,208,467,216,432" ng-click="region='arms'" title="Left Arm" />
+    <area shape="poly" coords="85,241,50,212,102,174,160,174,208,212,180,241,280,351,88,351" ng-click="region='torso'" title="Torso" />
+    <area shape="poly" coords="90,253,180,253,191,403,173,611,107,611,83,403" ng-click="region='bottoms'" title="Bottoms" />
+    <area shape="rect" coords="87,613,196,684" ng-click="region='feet'" title="Feet" />
+</map>
