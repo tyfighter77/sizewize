@@ -1,9 +1,10 @@
 <div class="modal">
-  <input class="modalInput" type="text" placeholder="ITEM">
-  <input class="modalInput" type="text" placeholder="SIZE">
-  <input class="modalInput" type="text" placeholder="DESCRIPTION">
+  <input class="modalInput" type="text" placeholder="ITEM" ng-model="item.item">
+  <input class="modalInput" type="text" placeholder="SIZE" ng-model="item.size">
+  <input class="modalInput" type="text" placeholder="DESCRIPTION" ng-model="item.desc">
   <br/>
-  <div class="modalButton" ng-click="login()">SAVE</div>
+  <div class="modalButton" ng-click="save(item)">SAVE</div>
+  <div class="modalButton" ng-click="delete()">DELETE</div>
 
 </div>
 <div class="fade" ng-click="close(false)"></div>

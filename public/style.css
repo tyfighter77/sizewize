@@ -218,3 +218,22 @@ body {
   height: 100%;
   z-index: 90;
 }
+
+.modalSelect {
+  width: 6vw;
+  margin-left: -0.7vw;
+  margin-right: 0;
+  display: inline-block;
+  color: #a9a9a9;
+}
+
+.selOpt {
+  color: white;
+}
+
+.modalNumber {
+  width: 6vw;
+  float: right;
+  margin-right: 3.5vw;
+  margin-left: -3.6vw;
+}

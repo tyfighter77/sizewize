@@ -10,9 +10,9 @@
   <span ng-click = "">arms</span>
   <span ng-click = "">bottoms</span>
   <span ng-click = "">feet</span> -->
-  <div class="profileListBox" ng-repeat="item in profile.region[region]">
+  <div class="profileListBox" ng-repeat="item in profile.region[region] track by $index">
     <div class="profileList" ng-click="itemClick = !itemClick">{{item.item}}</div>
-    <div class="profileList" ng-if="itemClick" ng-click="openItemModal()">{{item.size}}</div>
+    <div class="profileList" ng-if="itemClick" ng-click="openEditItemModal($index)">{{item.size}}</div>
   </div>
   <div class="profileListBox" ng-if="profile.region[region]">
     <div class="profileList" ng-click="openItemModal()">+</div>

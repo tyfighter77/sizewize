@@ -7,17 +7,32 @@ angular.module('sizewizeApp', ['ui.router','angularModalService'])
       controller: 'mainCtrl'
     })
     .state('profiles', {
-      url: '/profiles',
+      url: '/profiles/:id',
       templateUrl: './views/profilesTmpl.html',
-      controller: 'profilesCtrl'
+      controller: 'profilesCtrl',
+      resolve: {
+        profiles: function(profileService, $stateParams){
+          console.log($stateParams.id);
+          return profileService.getProfiles($stateParams.id);
+        },
+        userId: function($stateParams){
+          return $stateParams.id;
+        }
+      }
     })
     .state('profile', {
-      url: '/profile/:id',
+      url: '/profile/:user/:id',
       templateUrl: './views/profileTmpl.html',
       controller: 'profileCtrl',
       resolve: {
-        profile: function(tempService, $stateParams){
-          return tempService.getProfile($stateParams.id);
+        profile: function(profileService, $stateParams){
+          return profileService.getProfile($stateParams.id);
+        },
+        profileId: function($stateParams){
+          return $stateParams.id;
+        },
+        userId: function($stateParams){
+          return $stateParams.user;
         }
       }
     });

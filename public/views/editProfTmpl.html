@@ -1,9 +1,14 @@
 <div class="modal">
-  <input class="modalInput" type="email" placeholder="NAME">
-  <input class="modalInput" type="password" placeholder="GENDER">
-  <input class="modalInput" type="text" placeholder="AGE">
+  <input class="modalInput" type="text" placeholder="NAME" ng-model="profile.name">
+  <select class="modalInput modalSelect" ng-model="profile.genderTemplate">
+    <option value="" disabled selected>GENDER</option>
+    <option class="selOpt" value="male">MALE</option>
+    <option class="selOpt" value="female">FEMALE</option>
+  </select>
+  <input class="modalInput modalNumber" type="number" placeholder="AGE" ng-model="profile.age">
   <br/>
-  <div class="modalButton" ng-click="login()">SAVE</div>
+  <div class="modalButton" ng-click="run(profile)">SAVE</div>
+  <div class="modalButton" ng-click="delete()">DELETE</div>
 
 </div>
 <div class="fade" ng-click="close(false)"></div>
