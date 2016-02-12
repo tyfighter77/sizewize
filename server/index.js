@@ -8,13 +8,13 @@ var profileCtrl = require('./controllers/profileCtrl');
 
 var app = express();
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 app.use(express.static(__dirname+ "./../public"));
 
 
-var nodePort = 3000;
+var nodePort = config.PORT;
 
-var mongoUri = "mongodb://localhost:27017/sizewize";
+var mongoUri = config.MONGO_URI;
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function(){
   console.log("Successfully connected to mongodb");
