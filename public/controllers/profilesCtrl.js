@@ -22,7 +22,7 @@ angular.module('sizewizeApp')
       $state.go('welcome');
     };
     $scope.openProfModal = function() {
-      console.log('works');
+
       ModalService.showModal({
         templateUrl: './views/editProfTmpl.html',
         controller: 'addProfCtrl',
@@ -36,5 +36,12 @@ angular.module('sizewizeApp')
         });
       });
     };
+
+    $scope.toggleGender = function(gender){
+      $scope.gender = gender;
+      console.log(gender);
+    };
+
+
 
   });

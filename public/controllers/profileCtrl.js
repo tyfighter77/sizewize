@@ -5,9 +5,6 @@ angular.module('sizewizeApp')
 
   $scope.mannequinImg = "../images/AM-body.png";
 
-  $scope.showRegion = function(region) {
-    $scope.mannequinImg = '../images/AM-' + region + '.png';
-  };
 
   $scope.goToProfs = function(){
     $state.go('profiles', {id: userId});

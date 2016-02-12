@@ -86,14 +86,15 @@ body {
 }
 
 .mannequinPrevBox {
-  margin-top: 2vh;
+  margin-top: 10vh;
   width: 30vw;
 }
 
 .mannequinPrev {
-  height: 80vh;
+  height: 756px;
   float: left;
   margin-left: 5vw;
+  margin-top: -2vh;
 }
 
 .mannequinContainer {
@@ -103,7 +104,7 @@ body {
 }
 
 .mannequinBox {
-  margin-top: 2vh;
+  margin-top: 10vh;
   width: 30vw;
 }
 
@@ -111,7 +112,7 @@ body {
  text-transform: uppercase;
  font-size: 3.2vh;
  cursor: pointer;
- margin: 4vh 6.5vw -6vh auto;
+ margin: 4vh 7.5vw -6vh auto;
 }
 
 .nameLabel:hover {
@@ -161,8 +162,12 @@ body {
   color: #00a2ff;
 }
 
+.sizeDesc {
+  font-size: 2.5vh;
+  font-style: italic;
+}
 
-/*temp modal css*/
+/*Modal styling*/
 .modal {
   color: white;
   width: 20vw;
@@ -172,11 +177,33 @@ body {
   top: 46vh;
   margin-left: -11vw;
   margin-top: -10vh;
-  padding: 2vh 0 0 0;
   background-color: #4b007c;
   z-index: 100;
   text-align: center;
   font-size: 3.2vh;
+}
+
+.centerParent {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+
+.buttonContainer {
+  position: absolute;
+  width: 13vw;
+  height: 13vh;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.buttonRow {
+  clear: both;
+  height: 3.2vh;
+  margin-bottom: 1.5vh;
 }
 
 .modalInput {
@@ -191,6 +218,144 @@ body {
   margin: 1vh auto 0 auto;
   display: block;
 }
+
+.emailInput {
+  margin-top: 3vh;
+}
+
+.passwordInput {
+  margin-bottom: -2vh;
+}
+
+.nameInput {
+  width: 100%;
+  background-color: #2a0047;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  height: 3.2vh;
+  /*width: 13vw;*/
+  line-height: 3.2vh;
+  font-size: 2.5vh;
+  text-align: center;
+  /*margin: 1vh auto 0 auto;*/
+  display: block;
+}
+
+.modalSelect {
+  width: 6vw;
+  height: 3.4vh;
+  margin-top: 1.5vh;
+  margin-left: -0.7vw;
+  margin-right: 0;
+  display: inline-block;
+  color: #a9a9a9;
+}
+
+.selOpt {
+  color: white;
+}
+
+.modalNumber {
+  width: 6vw;
+  height: 3.2vh;
+  float: right;
+  margin-top: 1.5vh;
+  margin-right: 3.5vw;
+  margin-left: -3.6vw;
+}
+
+.profButton {
+  height: 3.2vh;
+  line-height: 3.2vh;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*.button-container {
+  clear: both;
+  width: 70%;
+  height: 3.2vh;
+  margin: 0 auto;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}*/
+
+.leftMidBtn {
+  width: 50%;
+  background-color: #2a0047;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: #a9a9a9;
+  height: 3.35vh;
+  /*width: 13vw;*/
+  line-height: 3.2vh;
+  font-size: 2.5vh;
+  text-align: center;
+  /*margin: 1vh auto 0 auto;*/
+  float: left;
+}
+
+.rightMidBtn {
+  width: 40%;
+  background-color: #2a0047;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  color: white;
+  height: 3.2vh;
+  /*width: 13vw;*/
+  line-height: 3.2vh;
+  font-size: 2.5vh;
+  text-align: center;
+  /*margin: 1vh auto 0 auto;*/
+  float: right;
+}
+
+.leftBotBtn {
+  width: 3.5vw;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  height: 3.2vh;
+  /*width: 13vw;*/
+  line-height: 3.2vh;
+  font-size: 3.2vh;
+  text-align: center;
+  /*margin: 1vh auto 0 auto;*/
+  float: left;
+  margin-top: 0.75vh;
+  cursor: pointer;
+}
+
+.rightBotBtn {
+  width: 5.3vw;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  height: 3.2vh;
+  /*width: 13vw;*/
+  line-height: 3.2vh;
+  font-size: 3.2vh;
+  text-align: center;
+  /*margin: 1vh auto 0 auto;*/
+  float: right;
+  margin-top: 0.75vh;
+  cursor: pointer;
+}
+
+.leftBotBtn:hover {
+  color: #00a2ff;
+}
+
+.rightBotBtn:hover {
+  color: #00a2ff;
+}
+
+.bottomBtn {
+  margin-bottom: -2.5vh;
+}
+
 
 .modalButton {
   height: 3.2vh;
@@ -219,21 +384,10 @@ body {
   z-index: 90;
 }
 
-.modalSelect {
-  width: 6vw;
-  margin-left: -0.7vw;
-  margin-right: 0;
-  display: inline-block;
-  color: #a9a9a9;
-}
-
-.selOpt {
-  color: white;
-}
-
-.modalNumber {
-  width: 6vw;
-  float: right;
-  margin-right: 3.5vw;
-  margin-left: -3.6vw;
+.infoBox {
+  text-align: center;
+  font-size: 3.2vh;
+  margin-left: 30vw;
+  margin-top: 30vh;
+  color: #4b007c;
 }

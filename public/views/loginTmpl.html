@@ -1,10 +1,10 @@
 <div class="modal">
-  <input class="modalInput" type="email" placeholder="EMAIL" ng-model="user.email">
-  <input class="modalInput" type="password" placeholder="PASSWORD" ng-model="user.password">
+  <input class="modalInput emailInput" type="email" placeholder="EMAIL" ng-model="user.email">
+  <input class="modalInput passwordInput" type="password" placeholder="PASSWORD" ng-model="user.password">
   <br/>
   <div class="modalButton" ng-click="login(user)">LOGIN</div>
-  <div class="modalButton" ng-click="signup(user)">SIGNUP</div>
   <div class="modalButton" ng-click="facebook()">f</div>
+  <div class="modalButton" ng-click="signup(user)">SIGNUP</div>
 
 </div>
 <div class="fade" ng-click="close(false)"></div>

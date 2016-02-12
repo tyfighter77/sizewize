@@ -5,7 +5,7 @@
 
 <div class="profileListContainer">
   <div class="profileListBox" ng-repeat="profile in profiles">
-    <div class="profileList" ng-click="goToProf(profile)">{{profile.name}}</div>
+    <div class="profileList" ng-click="goToProf(profile)"  ng-mouseover="toggleGender(profile.genderTemplate)">{{profile.name}}</div>
   </div>
 <div class="profileListBox">
   <div class="profileList" ng-click="openProfModal()">+</div>
@@ -13,7 +13,7 @@
 </div>
 <div class="mannequinPrevContainer">
   <div class="mannequinPrevBox">
-    <img class="mannequinPrev" src="../images/AM-body.png" />
+    <img class="mannequinPrev" ng-src="{{gender=='male' && '../images/AM-body.png' || gender=='female' && '../images/AF-body.png' || '../images/AM-body.png'}}" />
   </div>
 
 

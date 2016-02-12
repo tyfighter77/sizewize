@@ -1,4 +1,4 @@
-<div class="modal">
+<!-- <div class="modal">
   <input class="modalInput" type="text" placeholder="NAME" ng-model="profile.name">
   <select class="modalInput modalSelect" ng-model="profile.genderTemplate">
     <option value="" disabled selected>GENDER</option>
@@ -7,8 +7,30 @@
   </select>
   <input class="modalInput modalNumber" type="number" placeholder="AGE" ng-model="profile.age">
   <br/>
-  <div class="modalButton" ng-click="run(profile)">SAVE</div>
-  <div class="modalButton" ng-click="delete()">DELETE</div>
+  <div class="button-container">
+    <div class="profButton float-left" ng-click="run(profile)">SAVE</div>
+    <div class="profButton float-right" ng-click="delete()">DELETE</div>
+  </div> -->
 
+<div class="modal">
+  <div class="centerParent">
+    <div class="buttonContainer">
+      <div class="buttonRow">
+        <input class="nameInput" type="text" placeholder="NAME" ng-model="profile.name">
+      </div>
+      <div class="buttonRow">
+        <select class="leftMidBtn" ng-model="profile.genderTemplate">
+          <option value="" disabled selected>GENDER</option>
+          <option class="selOpt" value="male">MALE</option>
+          <option class="selOpt" value="female">FEMALE</option>
+        </select>
+        <input class="rightMidBtn" type="number" placeholder="AGE" ng-model="profile.age">
+      </div>
+      <div class="buttonRow">
+        <div class="leftBotBtn" ng-click="run(profile)">SAVE</div>
+        <div class="rightBotBtn" ng-click="delete()">DELETE</div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="fade" ng-click="close(false)"></div>
