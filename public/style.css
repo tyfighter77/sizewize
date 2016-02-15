@@ -94,7 +94,7 @@ body {
   height: 756px;
   float: left;
   margin-left: 5vw;
-  margin-top: -4vh;
+  margin-top: -6vh;
 }
 
 .mannequinContainer {
@@ -112,7 +112,7 @@ body {
  text-transform: uppercase;
  font-size: 3.2vh;
  cursor: pointer;
- margin: 4vh 6.5vw -8vh auto;
+ margin: -4vh 6.5vw -6vh auto;
 }
 
 .nameLabel:hover {
